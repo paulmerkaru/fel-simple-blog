@@ -1,0 +1,128 @@
+---
+const { title, description, pubDate, slug } = Astro.props
+const isoDate = new Date(pubDate).toISOString()
+const url = `https://www.felsimple.com/blog/${slug}/`
+---
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={url} />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={url} />
+    <meta property="og:site_name" content="FEL Simple" />
+    <meta property="article:published_time" content={isoDate} />
+
+    <!-- JSON-LD -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": title,
+      "description": description,
+      "datePublished": isoDate,
+      "url": url,
+      "author": {
+        "@type": "Organization",
+        "name": "FEL Simple",
+        "url": "https://www.felsimple.com"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "FEL Simple",
+        "url": "https://www.felsimple.com"
+      },
+      "inLanguage": "es-GT"
+    })} />
+
+    <style>
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+      body {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 1.0625rem;
+        line-height: 1.7;
+        color: #1a1a1a;
+        background: #fff;
+      }
+      header {
+        background: #0e4bdb;
+        padding: 1rem 1.5rem;
+      }
+      header a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 1.1rem;
+      }
+      main {
+        max-width: 720px;
+        margin: 0 auto;
+        padding: 2rem 1.5rem 4rem;
+      }
+      h1 { font-size: 2rem; line-height: 1.25; margin-bottom: 0.5rem; }
+      .meta { color: #666; font-size: 0.875rem; margin-bottom: 2rem; }
+      .content h2 { font-size: 1.4rem; margin: 2rem 0 0.75rem; }
+      .content h3 { font-size: 1.15rem; margin: 1.5rem 0 0.5rem; }
+      .content p { margin-bottom: 1rem; }
+      .content ul, .content ol { margin: 0.75rem 0 1rem 1.5rem; }
+      .content li { margin-bottom: 0.4rem; }
+      .content a { color: #0e4bdb; }
+      .cta {
+        margin-top: 2.5rem;
+        padding: 1.25rem 1.5rem;
+        background: #f0f4ff;
+        border-left: 4px solid #0e4bdb;
+        border-radius: 4px;
+      }
+      .cta a {
+        display: inline-block;
+        margin-top: 0.5rem;
+        background: #25d366;
+        color: #fff;
+        text-decoration: none;
+        padding: 0.6rem 1.2rem;
+        border-radius: 4px;
+        font-weight: 600;
+      }
+      footer {
+        text-align: center;
+        padding: 2rem;
+        font-size: 0.85rem;
+        color: #999;
+        border-top: 1px solid #eee;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a href="https://www.felsimple.com">← FEL Simple</a>
+    </header>
+    <main>
+      <article>
+        <h1>{title}</h1>
+        <p class="meta">Publicado el {new Date(pubDate).toLocaleDateString('es-GT', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
+        <div class="content">
+          <slot />
+        </div>
+        <div class="cta">
+          <strong>¿Querés facturar por WhatsApp?</strong><br />
+          FEL Simple lo hace por vos — sin complicaciones.
+          <br />
+          <a href="https://wa.me/50231151818" target="_blank" rel="noopener">
+            Probalo gratis por WhatsApp
+          </a>
+        </div>
+      </article>
+    </main>
+    <footer>
+      © {new Date().getFullYear()} FEL Simple · <a href="https://www.felsimple.com">felsimple.com</a>
+    </footer>
+  </body>
+</html>

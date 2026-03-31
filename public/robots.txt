@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.felsimple.com/blog/sitemap-index.xml

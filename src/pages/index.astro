@@ -1,0 +1,60 @@
+---
+import { getCollection } from 'astro:content'
+
+const allPosts = await getCollection('posts', ({ data }) => !data.draft)
+const posts = allPosts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+---
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog — FEL Simple</title>
+    <meta name="description" content="Guías y artículos sobre facturación electrónica FEL en Guatemala para pequeños contribuyentes." />
+    <link rel="canonical" href="https://www.felsimple.com/blog/" />
+    <style>
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+      body { font-family: system-ui, -apple-system, sans-serif; color: #1a1a1a; background: #fff; }
+      header { background: #0e4bdb; padding: 1rem 1.5rem; }
+      header a { color: #fff; text-decoration: none; font-weight: 700; font-size: 1.1rem; }
+      main { max-width: 720px; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
+      h1 { font-size: 1.75rem; margin-bottom: 0.5rem; }
+      .subtitle { color: #666; margin-bottom: 2rem; }
+      ul { list-style: none; }
+      li { border-bottom: 1px solid #eee; padding: 1.25rem 0; }
+      li:first-child { padding-top: 0; }
+      li a { text-decoration: none; color: #0e4bdb; font-size: 1.1rem; font-weight: 600; }
+      li a:hover { text-decoration: underline; }
+      .date { color: #999; font-size: 0.85rem; margin-top: 0.25rem; }
+      .desc { color: #444; font-size: 0.95rem; margin-top: 0.35rem; }
+      footer { text-align: center; padding: 2rem; font-size: 0.85rem; color: #999; border-top: 1px solid #eee; }
+      footer a { color: #0e4bdb; }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a href="https://www.felsimple.com">← FEL Simple</a>
+    </header>
+    <main>
+      <h1>Blog FEL Simple</h1>
+      <p class="subtitle">Guías de facturación electrónica para pequeños contribuyentes en Guatemala.</p>
+      {posts.length === 0 ? (
+        <p>Próximamente los primeros artículos.</p>
+      ) : (
+        <ul>
+          {posts.map(post => (
+            <li>
+              <a href={`/blog/${post.data.slug}/`}>{post.data.title}</a>
+              <p class="date">{new Date(post.data.pubDate).toLocaleDateString('es-GT', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
+              <p class="desc">{post.data.description}</p>
+            </li>
+          ))}
+        </ul>
+      )}
+    </main>
+    <footer>
+      © {new Date().getFullYear()} FEL Simple · <a href="https://www.felsimple.com">felsimple.com</a>
+    </footer>
+  </body>
+</html>
