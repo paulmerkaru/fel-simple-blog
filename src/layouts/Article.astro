@@ -48,56 +48,98 @@ const url = `https://www.felsimple.com/blog/${slug}/`
         font-family: system-ui, -apple-system, sans-serif;
         font-size: 1.0625rem;
         line-height: 1.7;
-        color: #1a1a1a;
-        background: #fff;
+        color: #ffffff;
+        background: #0a0a0a;
       }
       header {
-        background: #0e4bdb;
+        background: #0a0a0a;
+        border-bottom: 1px solid #1f1f1f;
         padding: 1rem 1.5rem;
       }
       header a {
-        color: #fff;
+        color: #1D9E75;
         text-decoration: none;
         font-weight: 700;
         font-size: 1.1rem;
       }
+      header a:hover { color: #6EE7B7; }
       main {
         max-width: 720px;
         margin: 0 auto;
         padding: 2rem 1.5rem 4rem;
       }
-      h1 { font-size: 2rem; line-height: 1.25; margin-bottom: 0.5rem; }
-      .meta { color: #666; font-size: 0.875rem; margin-bottom: 2rem; }
-      .content h2 { font-size: 1.4rem; margin: 2rem 0 0.75rem; }
-      .content h3 { font-size: 1.15rem; margin: 1.5rem 0 0.5rem; }
-      .content p { margin-bottom: 1rem; }
+      h1 { font-size: 2rem; line-height: 1.25; margin-bottom: 0.5rem; color: #ffffff; }
+      .meta { color: #888; font-size: 0.875rem; margin-bottom: 2rem; }
+      .content h2 {
+        font-size: 1.4rem;
+        margin: 2rem 0 0.75rem;
+        color: #ffffff;
+        padding-bottom: 0.4rem;
+        border-bottom: 1px solid #1D9E75;
+      }
+      .content h3 { font-size: 1.15rem; margin: 1.5rem 0 0.5rem; color: #e0e0e0; }
+      .content p { margin-bottom: 1rem; color: #d0d0d0; }
       .content ul, .content ol { margin: 0.75rem 0 1rem 1.5rem; }
-      .content li { margin-bottom: 0.4rem; }
-      .content a { color: #0e4bdb; }
+      .content li { margin-bottom: 0.4rem; color: #d0d0d0; }
+      .content a { color: #1D9E75; }
+      .content a:hover { color: #6EE7B7; }
+      .content strong { color: #ffffff; }
+      .content table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1.25rem 0;
+        font-size: 0.95rem;
+      }
+      .content th {
+        background: #222;
+        color: #ffffff;
+        text-align: left;
+        padding: 0.6rem 0.85rem;
+        border: 1px solid #333;
+      }
+      .content td {
+        background: #1a1a1a;
+        color: #d0d0d0;
+        padding: 0.55rem 0.85rem;
+        border: 1px solid #333;
+      }
+      .content tr:nth-child(even) td { background: #141414; }
+      .content pre, .content code {
+        background: #111;
+        color: #6EE7B7;
+        border-radius: 4px;
+      }
+      .content pre { padding: 1rem; overflow-x: auto; margin: 1rem 0; }
+      .content code { padding: 0.15rem 0.4rem; font-size: 0.9em; }
+      .content hr { border: none; border-top: 1px solid #1f1f1f; margin: 2rem 0; }
       .cta {
         margin-top: 2.5rem;
         padding: 1.25rem 1.5rem;
-        background: #f0f4ff;
-        border-left: 4px solid #0e4bdb;
+        background: #1a1a1a;
+        border-left: 4px solid #1D9E75;
         border-radius: 4px;
       }
+      .cta strong { color: #ffffff; }
       .cta a {
         display: inline-block;
-        margin-top: 0.5rem;
-        background: #25d366;
-        color: #fff;
+        margin-top: 0.75rem;
+        background: #1D9E75;
+        color: #000000;
         text-decoration: none;
-        padding: 0.6rem 1.2rem;
+        padding: 0.6rem 1.25rem;
         border-radius: 4px;
-        font-weight: 600;
+        font-weight: 700;
       }
+      .cta a:hover { background: #6EE7B7; }
       footer {
         text-align: center;
         padding: 2rem;
         font-size: 0.85rem;
-        color: #999;
-        border-top: 1px solid #eee;
+        color: #555;
+        border-top: 1px solid #1f1f1f;
       }
+      footer a { color: #1D9E75; text-decoration: none; }
+      footer a:hover { color: #6EE7B7; }
     </style>
   </head>
   <body>

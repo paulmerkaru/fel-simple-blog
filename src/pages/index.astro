@@ -15,21 +15,23 @@ const posts = allPosts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.
     <link rel="canonical" href="https://www.felsimple.com/blog/" />
     <style>
       *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-      body { font-family: system-ui, -apple-system, sans-serif; color: #1a1a1a; background: #fff; }
-      header { background: #0e4bdb; padding: 1rem 1.5rem; }
-      header a { color: #fff; text-decoration: none; font-weight: 700; font-size: 1.1rem; }
+      body { font-family: system-ui, -apple-system, sans-serif; color: #ffffff; background: #0a0a0a; }
+      header { background: #0a0a0a; border-bottom: 1px solid #1f1f1f; padding: 1rem 1.5rem; }
+      header a { color: #1D9E75; text-decoration: none; font-weight: 700; font-size: 1.1rem; }
+      header a:hover { color: #6EE7B7; }
       main { max-width: 720px; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
-      h1 { font-size: 1.75rem; margin-bottom: 0.5rem; }
-      .subtitle { color: #666; margin-bottom: 2rem; }
+      h1 { font-size: 1.75rem; margin-bottom: 0.5rem; color: #ffffff; }
+      .subtitle { color: #888; margin-bottom: 2rem; }
       ul { list-style: none; }
-      li { border-bottom: 1px solid #eee; padding: 1.25rem 0; }
+      li { border-bottom: 1px solid #1f1f1f; padding: 1.25rem 0; }
       li:first-child { padding-top: 0; }
-      li a { text-decoration: none; color: #0e4bdb; font-size: 1.1rem; font-weight: 600; }
-      li a:hover { text-decoration: underline; }
-      .date { color: #999; font-size: 0.85rem; margin-top: 0.25rem; }
-      .desc { color: #444; font-size: 0.95rem; margin-top: 0.35rem; }
-      footer { text-align: center; padding: 2rem; font-size: 0.85rem; color: #999; border-top: 1px solid #eee; }
-      footer a { color: #0e4bdb; }
+      li a { text-decoration: none; color: #1D9E75; font-size: 1.1rem; font-weight: 600; }
+      li a:hover { color: #6EE7B7; text-decoration: underline; }
+      .date { color: #888; font-size: 0.85rem; margin-top: 0.25rem; }
+      .desc { color: #999; font-size: 0.95rem; margin-top: 0.35rem; }
+      footer { text-align: center; padding: 2rem; font-size: 0.85rem; color: #555; border-top: 1px solid #1f1f1f; }
+      footer a { color: #1D9E75; text-decoration: none; }
+      footer a:hover { color: #6EE7B7; }
     </style>
   </head>
   <body>
