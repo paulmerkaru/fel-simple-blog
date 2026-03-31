@@ -1,9 +1,9 @@
 ---
 title: "Cómo llenar el formulario SAT-2046 en Declaraguate paso a paso"
 description: "Guía paso a paso para llenar el SAT-2046 en Declaraguate. Para pequeños contribuyentes en Guatemala. Con errores comunes y cómo evitarlos."
-pubDate: 2026-03-31
+pubDate: 2026-04-07
 slug: "como-llenar-sat-2046-declaraguate"
-draft: false
+draft: true
 ---
 
 Si sos pequeño contribuyente en Guatemala, el formulario **SAT-2046** es tu declaración mensual de IVA. Tenés que llenarlo todos los meses sin excepción — incluso los meses que no facturaste nada.

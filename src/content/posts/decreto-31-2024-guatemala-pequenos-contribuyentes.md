@@ -1,9 +1,9 @@
 ---
 title: "Decreto 31-2024 Guatemala: qué cambió para pequeños contribuyentes"
 description: "El Decreto 31-2024 elevó el límite del régimen de pequeño contribuyente en Guatemala. Qué cambió, desde cuándo aplica y qué tenés que hacer."
-pubDate: 2026-03-31
+pubDate: 2026-04-03
 slug: "decreto-31-2024-guatemala-pequenos-contribuyentes"
-draft: false
+draft: true
 ---
 
 En diciembre de 2024, el Congreso de Guatemala aprobó el **Decreto 31-2024**, una ley que trajo el cambio más importante al régimen de pequeño contribuyente en más de una década. Si tenés un negocio pequeño o trabajás como freelancer en Guatemala, estos cambios te afectan directamente.

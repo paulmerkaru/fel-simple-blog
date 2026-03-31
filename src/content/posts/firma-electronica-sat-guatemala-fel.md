@@ -1,9 +1,9 @@
 ---
 title: "Cómo activar tu firma electrónica SAT Guatemala para facturar FEL"
 description: "Paso a paso para generar tu firma electrónica en la Agencia Virtual SAT de Guatemala. Necesaria para facturar FEL con cualquier certificador."
-pubDate: 2026-03-31
+pubDate: 2026-04-10
 slug: "firma-electronica-sat-guatemala-fel"
-draft: false
+draft: true
 ---
 
 Antes de poder emitir tu primera factura FEL en Guatemala, hay un paso que no podés saltarte: **generar tu firma electrónica** en el portal de la SAT y acreditar al certificador que va a procesar tus facturas.

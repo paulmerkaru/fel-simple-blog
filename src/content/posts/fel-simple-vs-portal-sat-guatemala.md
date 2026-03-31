@@ -1,9 +1,9 @@
 ---
 title: "FEL Simple vs portal SAT: ¿cuál conviene para pequeños contribuyentes en Guatemala?"
 description: "¿Portal SAT o FEL Simple para emitir facturas FEL en Guatemala? Comparativa honesta de tiempo, costo y facilidad para pequeños contribuyentes."
-pubDate: 2026-03-31
+pubDate: 2026-04-14
 slug: "fel-simple-vs-portal-sat-guatemala"
-draft: false
+draft: true
 ---
 
 Todo pequeño contribuyente en Guatemala tiene que emitir facturas electrónicas FEL. La pregunta es: ¿cómo?
